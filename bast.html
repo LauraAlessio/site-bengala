@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitck inc</title>
+    <link rel="stylesheet" href="bast.css">
+    <link rel="icon" href="pin.png">
+</head>
+<body>
+    <section>
+        <div class="circ"></div>
+        <header>
+            <a href="#"><img src="logo.png" class="logo"></a>
+            <ul>
+                <li><a href="bast.html"><b>Inicio</b></a></li>
+                <li><a href="sobre.html"><b>Sobre</b></a></li>
+                <li><a href="#"><b>Bastões</b></a></li>
+                <li><a href="#"><b>Cadastre-se</b></a></li>
+            </ul>
+        </header>
+        
+        <div class="content">
+            <div class="textBox">
+            <h2>Todas as bengalas <br>aqui na <span>Stick inc.</span></h2>
+            <p> A  Assistência de Acessibilidade e Inclusão (AAI) e a Comissão 
+                Permanente de Acessibilidade e Inclusão (CPAI) da Justiça Eleitoral 
+                do Paraná informam as diferenças de significado entre os três tipos 
+                de bengalas utilizadas por pessoas com deficiência visual.  </p>
+            <a href="sobre.html">Saiba mais</a>
+            <br><audio id="myAudio">
+                <source src="AD incio.mp3" type="audio/mpeg">
+            </audio>
+            
+            </div>
+            <div class="imgBox">
+                <img src="i1.png" class="Bengala">
+            </div>
+        </div>
+        <ul class="resto">
+            <li><img src="i1.png" onclick="imgSlider('i1.png')"></li>
+            <li><img src="i2.png" onclick="imgSlider('i2.png')"></li>
+            <li><img src="i3.png" onclick="imgSlider('i3.png')"></li>
+        </ul>
+    </section>
+     <ul class="menu">
+            <div class="toggle">
+                <ion-icon name="accessibility-outline"></ion-icon>
+        </div>
+        <li style="--i:0;" class="active"><a href="#" onclick="playAudio()"><ion-icon name="volume-high-sharp">
+        </ion-icon></a></li>
+        <li style="--i:1;"><a href="#"><ion-icon name="eye-sharp">
+        </ion-icon></a></li>
+        <li style="--i:2;"><a href="#"><ion-icon name="mic-sharp">
+        </ion-icon></a></li>
+        <li style="--i:3;"><a href="#"><ion-icon name="hand-right-sharp">
+        </ion-icon></a></li>
+        <li style="--i:4;"><a href="#"><ion-icon name="search-sharp"></ion-icon></a></li>
+        <li style="--i:5;"><a href="#"><ion-icon name="language-sharp"></ion-icon></a></li>
+        <li style="--i:6;"><a href="#"><ion-icon name="eyedrop-sharp"></ion-icon></a></li>
+        <li style="--i:7;"><a href="#"><ion-icon name="book-sharp"></ion-icon></a></li>
+        
+        <div class="indicator">
+        </div>
+    </ul>
+    
+    <script>
+
+        function playAudio(){
+            let x = document.getElementById("myAudio");
+            x.play();
+        }
+        function pauseAudio(){
+            let x = document.getElementById("myAudio");
+            x.play();
+        }
+
+        let menuToggle = document.querySelector('.toggle');
+        let menu = document.querySelector('.menu');
+        menuToggle.onclick = function(){
+            menu.classList.toggle('active')
+            menuToggle.classList.toggle('active')
+        }
+
+        const list = document.querySelectorAll('li');
+        function activeLink(){
+            list.forEach((item) =>
+            item.classList.remove('active'));
+            this.classList.add('active')
+        }
+        list.forEach((item) =>
+        item.addEventListener('click', activeLink))
+    </script>
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.Bengala').src = anything;
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

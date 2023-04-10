@@ -17,8 +17,10 @@ body{
     height: 300px;
     margin-left: 1600px;
     display: flex;
+    margin-left: 1600px;
     justify-content: center;
     align-items: center;
+    bottom: 280px;
     bottom: 280px;
 
 }

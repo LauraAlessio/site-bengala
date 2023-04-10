@@ -15,9 +15,11 @@ body{
     position: relative;
     width: 300px;
     height: 300px;
+    margin-left: 1600px;
     display: flex;
     justify-content: center;
     align-items: center;
+    bottom: 280px;
 
 }
 .menu .toggle
